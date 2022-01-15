@@ -12,12 +12,14 @@ body{
 }
 
 .container{
-    width: 1100px;
+    max-width: 1100px;
     
     margin:50px auto;
     padding:0 10px;
 }
-
+.hightlight{
+    color:#E02C6D;
+}
 /* ===============
 nav  style
 =================== */
@@ -75,16 +77,51 @@ Header style
     color:white;
     font-weight: 700;
 }
+.primary-btn:hover .btn-icon{
+    animation: button 0.3s ease-in-out 0.1s infinite alternate ;
+    animation-play-state: running;
+    
+}
+@keyframes button {
+    from{
+        transform: translate(0px);
+        opacity: 1;
+
+    }
+    to{
+        transform: translate(15px);
+        opacity: 0;
+    }
+    
+}
 .btn-icon{
     margin-left: 8px;
+
 }
+
 .header-right img{
     width:90%;
     transition:transform 0.5s ease-in;
 }
-.header-right img:hover {
+.header-right:hover img{
     transform: scale(1.1) rotate(10deg);
     
+}
+/* ============================
+Social Markets
+================================ */
+
+
+.social-market{
+    border-bottom: 1px solid #C0CCDA;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #C0CCDA;
+}
+.social-market img{
+    padding:20px 20px;
 }
 
 /* =========================
@@ -139,4 +176,114 @@ Popular Collection style
     display: flex;
     flex-direction: row;
     justify-content: end;
+}
+/* =======================
+Feature style
+=========================  */
+
+.feature{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 26px;
+    justify-content: center;
+    align-items: center;
+}
+.feature-left img{
+    width:80%;
+}
+
+.feature-right h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.quiality {
+    padding: 5px 0;
+}
+.quiality h2 {
+    font-size: 24px;
+}
+.quiality p {
+    width: 80%;
+    font-size: 14px;
+    color:#787885;
+}
+.feature-right button {
+    margin-top: 27px;
+}
+/* ================================
+Footer style 
+=========================== */
+footer{
+    background-color: #0A0826;
+    text-align: center;
+   
+}
+.footer-title h2{
+    font-size: 24px;
+    font-weight: bold;
+    color:white;
+    padding-top:50px;
+}
+.footer-title p{
+    font-size: 14px;
+    font-weight: bold;
+    color:white;
+    padding:3px 0px;
+}
+.footer-icon i {
+    color: white;
+    font-size: 17px;
+    padding: 10px 10px;
+    background-color: #22213C;
+    border-radius: 100%;
+    margin: 16px 8px;
+}
+.footer-icon{
+    padding-bottom: 34px;
+}
+
+/*==============================
+            Media Quary
+ ============================ */
+/* Tablat Device */
+ @media (max-width:900px) {
+     .header,.feature{
+         display: grid;
+         grid-template-columns: 1fr;
+
+     }
+     .header-left{
+         order:2
+        }
+    .popular-collection{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+    .popular ,.feature-left,.header-right{
+        text-align: center;
+    }
+    .feature-left{
+        margin-bottom: 10px;
+    }
+    .feature-right{
+        margin-left:10%;
+    }
+    
+ }
+
+/* Mobile Device */
+@media (max-width:600px) {
+    .popular-collection{
+        display: grid;
+        grid-template-columns:1fr;
+        
+    }
+    .header-left h1, .feature-right h1{
+    font-size:30px;
+    }
+    .quiality h2, .popular h3{
+        font-size:20px;
+    }
+    
 }
