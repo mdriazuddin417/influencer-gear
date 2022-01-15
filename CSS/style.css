@@ -84,20 +84,20 @@ Header style
     font-size: 16px;
     color:white;
     font-weight: 700;
-    transition:transform 0.2s ease-in-out ;
+    transition:transform 0.2s ease-in-out;
 }
 .primary-btn:active{
     transform:translate(10px);
 
 }
 .primary-btn:hover .btn-icon{
-    animation: button 0.6s ease-in 0.1s infinite  ;
+    animation: button 0.6s ease-in 0.1s infinite;
     animation-play-state: running;
     
 }
 @keyframes button {
     from{
-        transform: translate(0px);
+        transform: translate(0px) ;
         opacity: 1;
 
     }
