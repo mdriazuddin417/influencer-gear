@@ -17,8 +17,14 @@ body{
     margin:50px auto;
     padding:0 10px;
 }
-.hightlight{
+.highlight{
     color:#E02C6D;
+}
+.section-title{
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom:30px;
 }
 /* ===============
 nav  style
@@ -39,7 +45,9 @@ nav a{
     margin-left:10px;
     padding:10px 10px;
 }
-
+.navigation-menu{
+    display: flex;
+}
 /* ===============
 Header style
 =================== */
@@ -78,7 +86,7 @@ Header style
     font-weight: 700;
 }
 .primary-btn:hover .btn-icon{
-    animation: button 0.3s ease-in-out 0.1s infinite alternate ;
+    animation: button 0.6s ease-in 0.1s infinite  ;
     animation-play-state: running;
     
 }
@@ -128,12 +136,7 @@ Social Markets
 Popular Collection style
 ===================== */
 
-.section-title{
-    font-size: 28px;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom:30px;
-}
+
 .popular-collection{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -145,10 +148,15 @@ Popular Collection style
     padding: 17px 15px;
     border-radius: 10px;
     box-shadow: 2px 2px 10px 0px #d7d7d7;
+    overflow: hidden;
+    
 }
 .popular img{
+    width:100%;
     margin-bottom:10px;
+       
 }
+
 .popular h3{
     font-size: 28px;
     margin:6px 0;
@@ -247,6 +255,9 @@ footer{
  ============================ */
 /* Tablat Device */
  @media (max-width:900px) {
+    .header,.popular-collection,.feature{
+        width:100%;
+    }
      .header,.feature{
          display: grid;
          grid-template-columns: 1fr;
@@ -273,12 +284,17 @@ footer{
     .feature-left{
         margin-bottom: 10px;
     }
-    
+    .popular img,.feature-left img{
+        width:100%;
+    }
     
  }
 
 /* Mobile Device */
 @media (max-width:600px) {
+    .header,.popular-collection,.feature{
+        width:100%;
+    }
     .popular-collection{
         display: grid;
         grid-template-columns:1fr;
@@ -290,11 +306,10 @@ footer{
     .quiality h2, .popular h3{
         font-size:20px;
     }
-    .popular img,.feature-left img{
-        width:100%;
-    }
+    /* Navigation Responsive */
+ 
 
     
 }
 
-/* Navigation Responsive */
+
