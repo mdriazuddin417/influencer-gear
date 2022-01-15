@@ -84,6 +84,11 @@ Header style
     font-size: 16px;
     color:white;
     font-weight: 700;
+    transition:transform 0.2s ease-in-out ;
+}
+.primary-btn:active{
+    transform:translate(10px);
+
 }
 .primary-btn:hover .btn-icon{
     animation: button 0.6s ease-in 0.1s infinite  ;
@@ -109,11 +114,15 @@ Header style
 
 .header-right img{
     width:90%;
+    position: relative;
     transition:transform 0.5s ease-in;
 }
 .header-right:hover img{
     transform: scale(1.1) rotate(10deg);
     
+}
+#camera-back{
+    background-image: url(./images/Circle.svg);
 }
 /* ============================
 Social Markets
@@ -195,9 +204,14 @@ Feature style
     grid-column-gap: 26px;
     justify-content: center;
     align-items: center;
+    
 }
 .feature-left img{
     width:80%;
+    border:2px solid #E02C6D;
+    border-radius: 10px;
+    
+   
 }
 
 .feature-right h1 {
@@ -306,7 +320,7 @@ footer{
     .quiality h2, .popular h3{
         font-size:20px;
     }
-    /* Navigation Responsive */
+   
  
 
     
